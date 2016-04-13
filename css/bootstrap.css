@@ -12,6 +12,12 @@ html {
 body {
   margin: 0;
 }
+
+.capture {
+  
+  float:right;
+}
+
 article,
 aside,
 details,
