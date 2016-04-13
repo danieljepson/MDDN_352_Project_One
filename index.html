@@ -67,6 +67,32 @@
 			</div>
 		  </div>
 		</div>
+				<div class="container-fluid" id="about">
+		  <div class="row">
+			<div class="col-md-8">
+				<p><strong>Geolocation Test</strong></p>
+				<p> </p>
+				<button onclick="getLocation()">Get my location</button>
+				<p id="demo"></p>
+					<script>
+					var a = document.getElementById("demo");
+					
+					function getLocation() {
+					    if (navigator.geolocation) {
+					        navigator.geolocation.getCurrentPosition(showPosition);
+					    } else { 
+					        a.innerHTML = "Geolocation is not supported in this browser.";
+					    }
+					}
+					
+					function showPosition(position) {
+					    a.innerHTML = "Latitude: " + position.coords.latitude + 
+					    " ,will use this value to layout images<br><br>Longitude: " + position.coords.longitude + " ,will not use this value";	
+					}
+					</script>
+			</div>
+		  </div>
+		</div>
 
 		<div id="footer">
 			
